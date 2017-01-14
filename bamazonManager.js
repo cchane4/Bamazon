@@ -18,6 +18,8 @@ connection.connect(function(err) {
            name: "method",
            message: "Would you like to view products, view low inventory, add inventory or add a new product?",
            choices: ['View Products', 'View Low Inventory', 'Add to Inventory','Add New Product']
-       }).then function(answer)
+       }).then function(answer){
 
  if (answer.method) === 'View Products'
+
+} 

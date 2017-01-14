@@ -32,7 +32,6 @@ const questions = [{
 // function allows user to choose products and quantities. 
 function choose() {
     inquirer.prompt(questions).then(function(answer) {
-        // answers.push(answer);
         checkProductQuantity(answer.question, answer.question2);
     });
 }
@@ -48,6 +47,7 @@ function checkProductQuantity(product_name, quantity) {
             updateStock(product_name,(stock - quantity),res[0].price * quantity);
         } else {
             console.log("Insufficient quantity!!!");
+            connection.end();
         }
     });
 }
